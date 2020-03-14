@@ -1,0 +1,143 @@
+html, body, .grid-container { 
+  height: 100%; 
+  margin: 0; 
+  background-image: url(../img/editeddd.jpg);
+}
+/*
+.grid-container * { 
+ border: 1px solid red;
+ position: relative;
+}
+
+.grid-container *:after { 
+ content:attr(class);
+ position: absolute;
+ top: 0;
+ left: 0;
+}
+*/
+
+/*Grid*/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 0.7fr 0.1fr 3.1fr 0.4fr;
+  grid-template-rows: 1fr 1.7fr 0.3fr;
+  grid-template-areas: "logo-title logo-title logo-title logo-title" "navbar . content ." "footer footer footer footer";
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "navbar-inside navbar-inside ." "navbar-inside navbar-inside .";
+  grid-area: navbar;
+}
+
+/*Navbar*/
+
+.navbar-inside { grid-area: navbar-inside; }
+
+.navbar-inside { 
+  font-family: "bocek-bold";
+  font-size: 1.1em
+}
+
+div.navbar-inside ul li a{
+  text-decoration: none;
+  color: #f75c03;
+  font-family: "bocek-bold";
+}
+
+div.navbar-inside ul li{
+  list-style-type: none;
+  display: table-row;   
+}
+
+div.navbar-inside ul {
+  list-style-type: none;
+  margin: 15px;
+  padding: 0;
+  width: 147px;
+  background-color: #f1f1f1;   
+}
+  
+div.navbar-inside li a, .dropbtn {
+  display: block;
+  color: #000103;
+  padding: 9px 14.2px;
+  text-decoration: none;
+  border-bottom: 1px solid #555;
+}
+
+div.navbar-inside li a:hover {
+  background-color: #db995a;
+  color: #654236;
+}
+
+/*Footer*/
+
+.footer { 
+  grid-area: footer; 
+  border-top: 3px solid black;
+  text-align: center;
+  font-family: "bocek-bold";
+  width: 100%;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1.7fr 0.3fr;
+  grid-template-areas: "content-inside content-inside content-inside" ". . .";
+  grid-area: content;
+}
+
+/*Text*/
+
+.content-inside { 
+  grid-area: content-inside; 
+  font-family: "bocek-bold";
+  font-size: 1.3em
+}
+
+.logo-title {
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr 1fr;
+  grid-template-rows: 1.4fr 0.6fr;
+  grid-template-areas: "logo-inside title-inside title-inside" "logo-inside . .";
+  grid-area: logo-title;
+}
+
+/*Logo*/
+
+.logo-inside { 
+  grid-area: logo-inside; 
+  padding-top: 15px;
+}
+
+/*Title*/
+
+.title-inside { 
+  grid-area: title-inside; 
+  font-family: "bocek-bold";
+  padding-top: 30px;
+  padding-left: 200px;
+  font-size: 1.5em
+}
+
+/*Font*/
+
+@font-face{
+  font-family: "bocek";
+  src: url(../font/Champagne_Limousines.ttf);
+}
+
+@font-face{
+  font-family: "bocek-bold";
+  src: url(../font/Champagne_Limousines_Bold.ttf);
+
+/*
+  Ceyhun Gulbas 09/03/2020
+  https://www.linkedin.com/in/ceyhun-gulbas/
+*/
