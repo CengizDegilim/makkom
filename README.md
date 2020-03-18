@@ -1,6 +1,7 @@
 # makkom
 my first website project 
 _________________________
+
 TR
 
 Bu benim ilk aldığım işti. Bana HTML + CSS öğreten Hakan Yıldız'a ve bu eğitim imkanını veren RE:CODED kuruluşuna çok teşekkür ederim.
